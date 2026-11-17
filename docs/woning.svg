@@ -1,20 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600">
-<defs><linearGradient id="night" x2="0" y2="1"><stop stop-color="#081c24"/><stop offset="1" stop-color="#102f36"/></linearGradient><linearGradient id="roof" x2="0" y2="1"><stop stop-color="#234452"/><stop offset="1" stop-color="#12252e"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="6"/></filter></defs>
-<rect width="1000" height="600" fill="url(#night)"/><circle cx="814" cy="84" r="32" fill="#b4d5cb" opacity=".55"/>
-<path d="M70 528H930" stroke="#34605b" stroke-width="3"/>
-<rect x="230" y="279" width="548" height="248" fill="#18363f" stroke="#37636b" stroke-width="4"/>
-<path d="M194 286L504 110L820 286L767 304L506 163L240 309Z" fill="url(#roof)" stroke="#8ab4a5" stroke-width="4"/>
-<g transform="translate(386 154) skewX(-17) rotate(-8)"><rect width="267" height="102" rx="4" fill="#163948" stroke="#7fe26e" stroke-width="4"/><path d="M0 34H267M0 68H267M66 0V102M133 0V102M200 0V102" stroke="#739bb2" stroke-width="3"/></g>
-<rect x="286" y="326" width="160" height="130" fill="#a9c49b" opacity=".13" stroke="#a2ce97" stroke-width="3"/><path d="M366 326V456" stroke="#a2ce97" stroke-width="3"/>
-<rect x="482" y="326" width="146" height="199" fill="#132a30" stroke="#8dc2a1" stroke-width="3"/>
-<rect x="648" y="329" width="82" height="124" fill="#accbaf" opacity=".13" stroke="#8dc2a1" stroke-width="3"/>
-<ellipse cx="804" cy="501" rx="98" ry="27" fill="#12b9de" opacity=".33" filter="url(#glow)"/>
-<path d="M718 451L873 451L890 502Q804 551 710 500Z" fill="#164454" stroke="#53b9bd" stroke-width="4"/>
-<ellipse cx="796" cy="450" rx="78" ry="17" fill="#2a95ba" stroke="#5de4f5" stroke-width="3"/>
-<path d="M241 515H771" stroke="#bcf15d" stroke-width="5" opacity=".5" filter="url(#glow)"/>
-<rect x="85" y="388" width="92" height="143" rx="14" fill="#132b35" stroke="#64ca60" stroke-width="5"/>
-<rect x="102" y="408" width="59" height="93" rx="6" fill="#244b3c"/>
-<rect x="110" y="460" width="43" height="34" fill="#8ff064"/><rect x="110" y="424" width="43" height="28" fill="#8ff064" opacity=".65"/>
-<path d="M177 480H240" stroke="#9ae66e" stroke-width="6" stroke-dasharray="12 7"/>
-<text x="500" y="576" fill="#9ab6b5" text-anchor="middle" font-family="Arial" font-size="21">Schematische woning • apparaten zijn illustratief</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 620">
+<defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#0c1821"/><stop offset=".72" stop-color="#14303a"/><stop offset="1" stop-color="#0e2529"/></linearGradient><linearGradient id="wall" x2=".1" y2="0" x1="1" y1="1"><stop stop-color="#5a625b"/><stop offset="1" stop-color="#233743"/></linearGradient><linearGradient id="window" x2="0" y2="1"><stop stop-color="#f3bf7d"/><stop offset="1" stop-color="#8b633f"/></linearGradient><linearGradient id="roof" x2="0" y2="1"><stop stop-color="#3a4f5b"/><stop offset="1" stop-color="#192c37"/></linearGradient><linearGradient id="pool" x2="0" y2="1"><stop stop-color="#2dbfe7"/><stop offset="1" stop-color="#064d66"/></linearGradient><filter id="shadow"><feGaussianBlur stdDeviation="16"/></filter><filter id="soft"><feGaussianBlur stdDeviation="5"/></filter></defs>
+<rect width="1100" height="620" fill="url(#sky)"/><circle cx="1000" cy="90" r="35" fill="#a3bcb0" opacity=".15" filter="url(#shadow)"/>
+<path d="M0 530Q250 500 550 532T1100 520V620H0Z" fill="#0a201e"/>
+<g opacity=".45" fill="#132e2a"><path d="M35 530V270m-30 60 30-82 35 82m-60 10 60-110 60 110m-50 15 50-90 45 90" stroke="#255244" stroke-width="11"/><path d="M930 510V290m-60 64 60-145 65 145m-105 40 80-145 77 145" stroke="#20483f" stroke-width="15"/></g>
+<path d="M200 298L547 103L875 298L842 316L546 155L229 318Z" fill="url(#roof)" stroke="#81989a" stroke-width="5"/>
+<path d="M242 308L545 163L820 309V534H242Z" fill="url(#wall)" stroke="#51676a" stroke-width="4"/>
+<path d="M545 164L820 310V534H545Z" fill="#243943" opacity=".9"/>
+<path d="M242 309L545 166V309Z" fill="#455762"/>
+<path d="M541 170L822 311V294L544 149Z" fill="#1e313d" stroke="#82939c" stroke-width="2"/>
+<g transform="translate(358 179) rotate(-24) skewX(15)"><rect width="318" height="123" rx="6" fill="#102c3a" stroke="#a3d78e" stroke-width="4"/><path d="M0 41H318M0 82H318M53 0V123M106 0V123M159 0V123M212 0V123M265 0V123" stroke="#678faa" stroke-width="3"/><path d="M0 0H318M0 123H318" stroke="#78c49b" stroke-width="3"/></g>
+<g><rect x="288" y="337" width="197" height="164" fill="url(#window)" opacity=".8" stroke="#6b8283" stroke-width="9"/><path d="M387 337V501M288 419H485" stroke="#536a6c" stroke-width="7"/><rect x="320" y="443" width="144" height="34" rx="9" fill="#3e433e"/><rect x="325" y="425" width="127" height="29" rx="8" fill="#52604e"/><rect x="305" y="347" width="20" height="55" fill="#f3c386" opacity=".35"/></g>
+<g><rect x="558" y="334" width="125" height="200" fill="#8f6747" stroke="#6c8583" stroke-width="9"/><rect x="573" y="355" width="95" height="172" fill="#9c7650" opacity=".78"/><circle cx="650" cy="443" r="5" fill="#f6dc9d"/></g>
+<g><rect x="710" y="333" width="88" height="156" fill="#4c6e7c" stroke="#728e92" stroke-width="8"/><path d="M754 333V489" stroke="#728e92" stroke-width="5"/><rect x="723" y="412" width="64" height="36" fill="#88b4ba" opacity=".45"/></g>
+<path d="M216 534H850" stroke="#77926d" stroke-width="7"/><path d="M210 555H847" stroke="#33524b" stroke-width="7"/>
+<g><rect x="107" y="441" width="99" height="131" rx="13" fill="#142f37" stroke="#67cd6e" stroke-width="5"/><rect x="124" y="461" width="65" height="87" rx="4" fill="#254d3b"/><rect x="135" y="500" width="44" height="38" fill="#8bf36e"/><rect x="135" y="470" width="44" height="23" fill="#9fe66a" opacity=".56"/><circle cx="156" cy="556" r="5" fill="#8ef66b"/></g>
+<ellipse cx="918" cy="547" rx="128" ry="41" fill="#1ac4ef" opacity=".35" filter="url(#soft)"/>
+<g><path d="M815 489H1031L1016 563Q912 592 821 563Z" fill="#163e4f" stroke="#578992" stroke-width="6"/><ellipse cx="920" cy="489" rx="111" ry="30" fill="url(#pool)" stroke="#72d9ec" stroke-width="5"/><path d="M838 487Q871 467 913 486T996 481" fill="none" stroke="#9de8ef" stroke-width="3" opacity=".7"/></g>
+<path d="M207 509H257" stroke="#a5ed6e" stroke-width="5" stroke-dasharray="11 8" opacity=".75"/><text x="550" y="603" fill="#a1b8ae" font-family="Arial" font-size="17" text-anchor="middle">Illustratie · woning en apparaten zijn niet automatisch gemeten</text>
 </svg>
