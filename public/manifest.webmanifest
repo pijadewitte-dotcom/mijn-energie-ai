@@ -1,0 +1,9 @@
+{
+  "name": "Mijn Energie AI",
+  "short_name": "Mijn Energie",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#09151b",
+  "theme_color": "#09151b",
+  "lang": "nl-BE"
+}
