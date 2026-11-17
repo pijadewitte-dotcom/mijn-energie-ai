@@ -1,0 +1,57 @@
+<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#081b22"><link rel="manifest" href="/manifest.webmanifest"><title>Mijn Energie AI</title>
+<style>
+:root{font:15px system-ui,'Segoe UI',sans-serif;color:#e9f5ef;background:#09161c}*{box-sizing:border-box}body{margin:0}h1,h2,p{margin:0}h1{font-size:30px}h2{font-size:18px}small,.muted{color:#9ab2b5}button,input{font:inherit;border-radius:11px;padding:12px;border:1px solid #34565d}button{background:#9eea63;color:#152614;font-weight:700;cursor:pointer}input{background:#122b32;color:white;width:100%}.layout{display:grid;grid-template-columns:210px minmax(0,1fr);min-height:100vh}.sidebar{background:#0c2229;border-right:1px solid #26414a;padding:25px 16px}.brand{color:#9eea63;font-size:22px;font-weight:800;padding:8px 12px 35px}.nav{padding:14px 10px;margin:4px 0;border-radius:10px;color:#c3dbd7}.nav:first-of-type{background:#245e35;color:#d7fdbf}.main{width:100%;max-width:1550px;margin:0 auto;padding:28px}.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px;gap:16px}.status{padding:11px 15px;background:#18332c;border-radius:20px;color:#a5ec80}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:16px}.card,.panel{background:#112730;border:1px solid #2c4850;border-radius:17px;padding:19px}.metric{font-size:30px;font-weight:800;margin:9px 0 4px}.green{color:#a6f47b}.yellow{color:#ffd37d}.cols{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(295px,1fr);gap:17px}.stack{display:grid;align-content:start;gap:17px}.house{position:relative}.house img{width:100%;height:315px;object-fit:contain;background:#081a21;border-radius:13px;margin-top:12px}.label{position:absolute;top:105px;left:30px;background:#0b2129e8;border:1px solid #528f70;border-radius:12px;padding:12px 16px}.label.right{left:auto;right:30px}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.chip{background:#25414a;padding:9px 12px;border-radius:9px;font-size:12px}.hint{margin-top:12px;font-size:12px;color:#a1b8bb;line-height:1.45}.tip{background:#19352f;border:1px solid #315a47;border-radius:11px;padding:14px;margin-top:12px}.tip strong{color:#a6f47b}.tip p{color:#c8dad1;font-size:13px;line-height:1.5;margin-top:7px}canvas{display:block;width:100%;height:180px;margin-top:14px}.login{position:fixed;inset:0;display:grid;place-items:center;background:#071419;z-index:20;padding:20px}.login .panel{max-width:450px;width:100%;padding:30px}.login form{display:grid;gap:13px;margin-top:20px}.err{color:#ffaaaa}.between{display:flex;justify-content:space-between;align-items:center;gap:12px}
+@media(max-width:1060px){.layout{grid-template-columns:1fr}.sidebar{display:none}.main{padding:16px}.cols{grid-template-columns:1fr}}@media(max-width:620px){.cards{grid-template-columns:1fr 1fr;gap:8px}.card,.panel{padding:13px}.metric{font-size:23px}.house img{height:250px}.label{left:10px;top:95px;padding:8px}.label.right{right:10px}.top h1{font-size:24px}}
+</style></head><body>
+<section id="login" class="login"><div class="panel"><h1 class="green">⚡ Mijn Energie AI</h1><p class="muted" style="margin-top:9px">Privédashboard voor de woning</p><form id="loginForm"><input type="password" id="pw" required placeholder="Toegangswachtwoord" autocomplete="current-password"><button>Dashboard openen</button><p id="error" class="err"></p></form></div></section>
+<div class="layout"><aside class="sidebar"><div class="brand">⌂ Mijn Energie</div><div class="nav">▣ Dashboard</div><div class="nav">↗ Energieflow</div><div class="nav">✧ Energiecoach</div><div class="nav">▥ Historiek</div><p class="hint">LOWI3 · MQTT · v0.3.1</p></aside><main class="main">
+<div class="top"><div><small>MIJN ENERGIE AI • WONINGOVERZICHT</small><h1>Goedendag! 👋</h1><p class="muted">Actueel energieverbruik en slimme bespaartips</p></div><div id="status" class="status">Verbinding controleren…</div></div>
+<div class="cards">
+<div class="card"><small>⚡ Netafname</small><div class="metric green" id="pi">— W</div><small>LOWI3 P1 · live</small></div>
+<div class="card"><small>↗ Netinjectie</small><div class="metric yellow" id="pe">— W</div><small>LOWI3 P1 · live</small></div>
+<div class="card"><small>☀ Zonnepanelen</small><div class="metric">0 W</div><small>Niet aanwezig</small></div>
+<div class="card"><small>♨ Gasmeterstand</small><div class="metric" id="gas">— m³</div><small>Totale stand, geen vermogen</small></div></div>
+<div class="cols"><div class="stack">
+<div class="panel house"><div class="between"><h2>🏠 Live energieflow</h2><small id="age">Wachten op LOWI3</small></div><img src="/woning.svg" alt="Schematische illustratie van een huis met zonnepanelen, jacuzzi en batterij">
+<div class="label"><small>NET → WONING</small><div class="metric green" id="flow">— W</div></div><div class="label right"><small>INJECTIE → NET</small><div class="metric yellow" id="flowpe">— W</div></div>
+<div class="chips"><span class="chip">☀ Zonnepanelen: 0 W · afwezig</span><span class="chip">♨ Jacuzzi: UIT · afwezig</span><span class="chip">🔋 Batterij: niet aanwezig</span></div><p class="hint">Huis en apparaten zijn illustratief. Alleen de LOWI3-netmeterwaarden zijn gemeten; geen fictieve live data.</p></div>
+<div class="panel"><div class="between"><h2>📈 Netafname — laatste 24 uur</h2><small>Gemeten waarden</small></div><canvas id="chart"></canvas><p class="hint" id="chartNote">Wachten op meetgegevens</p></div></div>
+<div class="stack"><div class="panel"><h2>✧ Mijn Energiecoach</h2><p class="hint">Regelgebaseerde tips; geen bewezen kostenbesparing of zelfstandige AI-sturing.</p><div id="tips"></div></div>
+<div class="panel"><h2>⚙ Apparaten</h2><p class="hint" style="line-height:2">☀ Zonnepanelen – niet aanwezig<br>♨ Jacuzzi – niet aanwezig<br>🔋 Batterij – niet aanwezig<br>🔌 Slimme stekkers – niet gekoppeld</p><p class="hint">Automatisch schakelen is nog niet beschikbaar.</p></div>
+<div class="panel between"><span>Privéomgeving</span><button id="logout">Afmelden</button></div></div></div></main></div>
+<script>
+const el=id=>document.getElementById(id);let ws;
+const fmt=(n,u)=>n===null||n===undefined?'— '+u:new Intl.NumberFormat('nl-BE',{maximumFractionDigits:u==='m³'?3:0}).format(n)+' '+u;
+el('loginForm').onsubmit=async e=>{e.preventDefault();try{const r=await fetch('/api/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password:el('pw').value})});if(!r.ok){el('error').textContent=r.status===429?'Te veel pogingen, probeer later opnieuw.':'Onjuist wachtwoord';return}el('pw').value='';await connect()}catch{el('error').textContent='Server niet bereikbaar'}};
+el('logout').onclick=async()=>{await fetch('/api/logout',{method:'POST'});location.reload()};
+function render(s){
+ const d=s.live?s.last:null;
+ el('pi').textContent=fmt(d?.PI,'W');el('pe').textContent=fmt(d?.PE,'W');el('flow').textContent=fmt(d?.PI,'W');el('flowpe').textContent=fmt(d?.PE,'W');el('gas').textContent=fmt(d?.CG==null?null:d.CG/1000,'m³');
+ el('status').textContent=s.live?'● LIVE · LOWI3':s.connected?'● MQTT actief · wachten op P1':'● Geen actuele data';
+ el('age').textContent=s.age==null?'Geen meting':s.age+' sec geleden';
+ const tips=[['Sluipverbruik opsporen','Meet het basisverbruik wanneer vrijwel alles uitstaat. Controleer daarna afzonderlijke toestellen met een slimme stekker.'],['Verlichting optimaliseren','Vervang veelgebruikte halogeenlampen door ledlampen en beperk onnodige buitenverlichting.'],['Verwarmingsschema controleren','Controleer of verwarming of warm water buiten gebruiksuren onnodig energie vragen.']];
+ if(s.live&&d?.PI>2500)tips.unshift(['Hoge netafname', 'De netmeter meldt momenteel '+fmt(d.PI,'W')+'. Bekijk welke zware toestellen actief zijn; LOWI3 kent de individuele oorzaak niet.']);
+ el('tips').replaceChildren(...tips.map(([t,p])=>{const div=document.createElement('div');div.className='tip';const strong=document.createElement('strong');strong.textContent=t;const text=document.createElement('p');text.textContent=p;div.append(strong,text);return div}));
+ draw(s.history||[]);
+}
+function draw(rows){
+ const c=el('chart'),ctx=c.getContext('2d'),w=c.clientWidth||500,h=180,ratio=window.devicePixelRatio||1;
+ c.width=Math.round(w*ratio);c.height=Math.round(h*ratio);ctx.scale(ratio,ratio);ctx.clearRect(0,0,w,h);
+ ctx.strokeStyle='#29474c';for(let i=1;i<5;i++){ctx.beginPath();ctx.moveTo(0,h*i/5);ctx.lineTo(w,h*i/5);ctx.stroke()}
+ const points=rows.filter(x=>x.at>=Date.now()-86400000&&x.PI!=null);
+ el('chartNote').textContent=points.length<2?'Nog onvoldoende metingen':'Historiek: '+points.length+' meetpunten';
+ if(points.length<2)return;
+ const first=points[0].at,last=points[points.length-1].at,max=Math.max(100,...points.map(p=>p.PI));
+ ctx.strokeStyle='#b3f17a';ctx.lineWidth=2.5;ctx.beginPath();
+ points.forEach((p,i)=>{const x=(p.at-first)/(last-first||1)*w,y=h-10-p.PI/max*(h-20);if(i)ctx.lineTo(x,y);else ctx.moveTo(x,y)});ctx.stroke();
+}
+async function connect(){
+ const r=await fetch('/api/state');if(!r.ok){el('login').style.display='grid';return}
+ el('login').style.display='none';render(await r.json());
+ if(ws)ws.close();
+ ws=new WebSocket((location.protocol==='https:'?'wss:':'ws:')+'//'+location.host+'/live');
+ ws.onmessage=e=>{try{render(JSON.parse(e.data))}catch{}};
+ ws.onclose=()=>{ws=null;setTimeout(()=>{if(el('login').style.display==='none')connect()},5000)};
+}
+connect().catch(()=>{el('status').textContent='Server niet bereikbaar'});
+</script></body></html>
