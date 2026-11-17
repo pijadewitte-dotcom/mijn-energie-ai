@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600">
+<defs><linearGradient id="night" x2="0" y2="1"><stop stop-color="#081c24"/><stop offset="1" stop-color="#102f36"/></linearGradient><linearGradient id="roof" x2="0" y2="1"><stop stop-color="#234452"/><stop offset="1" stop-color="#12252e"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="6"/></filter></defs>
+<rect width="1000" height="600" fill="url(#night)"/><circle cx="814" cy="84" r="32" fill="#b4d5cb" opacity=".55"/>
+<path d="M70 528H930" stroke="#34605b" stroke-width="3"/>
+<rect x="230" y="279" width="548" height="248" fill="#18363f" stroke="#37636b" stroke-width="4"/>
+<path d="M194 286L504 110L820 286L767 304L506 163L240 309Z" fill="url(#roof)" stroke="#8ab4a5" stroke-width="4"/>
+<g transform="translate(386 154) skewX(-17) rotate(-8)"><rect width="267" height="102" rx="4" fill="#163948" stroke="#7fe26e" stroke-width="4"/><path d="M0 34H267M0 68H267M66 0V102M133 0V102M200 0V102" stroke="#739bb2" stroke-width="3"/></g>
+<rect x="286" y="326" width="160" height="130" fill="#a9c49b" opacity=".13" stroke="#a2ce97" stroke-width="3"/><path d="M366 326V456" stroke="#a2ce97" stroke-width="3"/>
+<rect x="482" y="326" width="146" height="199" fill="#132a30" stroke="#8dc2a1" stroke-width="3"/>
+<rect x="648" y="329" width="82" height="124" fill="#accbaf" opacity=".13" stroke="#8dc2a1" stroke-width="3"/>
+<ellipse cx="804" cy="501" rx="98" ry="27" fill="#12b9de" opacity=".33" filter="url(#glow)"/>
+<path d="M718 451L873 451L890 502Q804 551 710 500Z" fill="#164454" stroke="#53b9bd" stroke-width="4"/>
+<ellipse cx="796" cy="450" rx="78" ry="17" fill="#2a95ba" stroke="#5de4f5" stroke-width="3"/>
+<path d="M241 515H771" stroke="#bcf15d" stroke-width="5" opacity=".5" filter="url(#glow)"/>
+<rect x="85" y="388" width="92" height="143" rx="14" fill="#132b35" stroke="#64ca60" stroke-width="5"/>
+<rect x="102" y="408" width="59" height="93" rx="6" fill="#244b3c"/>
+<rect x="110" y="460" width="43" height="34" fill="#8ff064"/><rect x="110" y="424" width="43" height="28" fill="#8ff064" opacity=".65"/>
+<path d="M177 480H240" stroke="#9ae66e" stroke-width="6" stroke-dasharray="12 7"/>
+<text x="500" y="576" fill="#9ab6b5" text-anchor="middle" font-family="Arial" font-size="21">Schematische woning • apparaten zijn illustratief</text>
+</svg>
